@@ -96,16 +96,16 @@ Ans : My block belongs to the datapath and memory/I/O interface layer. It receiv
 ## E4 Syllabus map
 Tick every syllabus topic your work touched (main units: Unit 2, Unit 6).
 
-- [ ] Logic gates, Boolean algebra, K-maps
-- [ ] Combinational circuits (adders, decoders, encoders, multiplexers)
+- [x] Logic gates, Boolean algebra, K-maps
+- [x] Combinational circuits (adders, decoders, encoders, multiplexers)
 - [ ] Flip-flops, registers, counters
-- [ ] Memory (RAM, ROM)
-- [ ] Number systems, complements, signed arithmetic
-- [ ] Bus organisation, instruction codes and formats
-- [ ] Instruction cycle, hardwired vs microprogrammed control
+- [x] Memory (RAM, ROM)
+- [x] Number systems, complements, signed arithmetic
+- [x] Bus organisation, instruction codes and formats
+- [x] Instruction cycle, hardwired vs microprogrammed control
 - [ ] Interrupts and the interrupt cycle
 - [ ] Pipelining
 - [ ] Register organisation, stack, addressing modes
-- [ ] RISC vs CISC, multicore, GPU
+- [x] RISC vs CISC, multicore, GPU
 - [ ] Memory hierarchy, cache
-- [ ] I/O interface, programmed / interrupt-driven I/O, DMA
+- [x] I/O interface, programmed / interrupt-driven I/O, DMA
