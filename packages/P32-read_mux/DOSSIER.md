@@ -82,9 +82,35 @@ Trace one **SRA** instruction through the whole RC-V processor,
 block by block (use docs/ARCHITECTURE.md and the simulator's --trace output).
 List the blocks it passes through and the value on the main signals.
 
+Ans: The SRA (Shift Right Arithmetic) instruction is an R-type instruction. It performs an arithmetic right shift on the value in the source register by the shift amount specified in the second source register.
+
+**Blocks involved:**
+
+1. **Fetch:** P14 (PC) provides the address to P30 (ROM), which fetches the SRA instruction.
+2. **Decode:** P17 extracts the instruction fields. P21 identifies the OP instruction class. P22/P23 generate the control word, and P24 selects/checks the control signals. P13 reads the source registers.
+3. **Execute:** P26 selects the operands. P10 generates the ALU control, and P01–P08 perform the arithmetic right shift.
+4. **Memory:** No data memory access is required because SRA is an arithmetic instruction, not a load or store.
+5. **Write-back:** P25 selects the ALU result, and P11/P12 write the result into the destination register.
+6. **Next PC:** P03, P16 and P15 select and update the next sequential PC.
+
+**Main control signals:**
+- Instruction class: OP
+- Control word: 0x4000
+- regwrite = 1
+- memread = 0
+- memwrite = 0
+- wbsel = 00 (ALU result)
+- P32 read selector: Not used for SRA.
+
 ## E2 Neighbour review
 Review the pull requests of P31 (Address decoder (memory map)) and P33 (I/O read bus). Paste the links to your review
 comments here.
+
+Ans: ### E2 Neighbour review
+
+**P31 – Address decoder (memory map):**
+
+**P33 – I/O read bus:**
 
 ## E3 Where my block sits
 In two or three sentences: which layer of the computer is your block in
